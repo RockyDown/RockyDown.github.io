@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>白嫖外链播放器工具</title>
+  <script>
+    var txt = document.getElementById("input");
+    var btn = document.getElementById("btn");
+    btn.onclick = function(){
+      if (txt.value = ""){
+        alert("id为空！！");
+      } else {
+        var ul = "https://music.163.com/#/outchain/2/" + txt.value;
+        document.getElementsByClassName("content").value="生成外链网址为：<a href='"+ul+"'>"+ul+"</a>"    /* 假如txt.value=100，那么content.value就是<a href='https://music.163.com/#/outchain/2/100'>https://music.163.com/#/outchain/2/</a> */
+      }
+  </script>
+</head>
+<body>
+  <input type="text" value="输入网易云音乐播放器的音乐ID" id="input" /><input type="button" value="OK" id="btn" />
+  <div id="content"></div>
+  <em>By Rocky</em>
+</body>
+</html>
